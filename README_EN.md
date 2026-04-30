@@ -174,18 +174,6 @@ python scripts/liubu.py "Add user registration feature" --verbose
 | Slow API calls | Too many model dependencies | Use smaller models or optimize requests |
 | Rejections lack specific reasons | Menxia Sheng prompt insufficient | Enforce "rejections must include reasons" |
 
-## AI-Driven Development
-
-This project was conceived and built end-to-end through AI agent collaboration. Concrete deliverables include:
-
-- **SKILL.md core definition** — The complete role hierarchy, closed-loop execution flow, and structured output formats for edict drafting / review / execution, designed by AI through systematic mapping of the ancient imperial court system onto modern multi-agent architecture
-- **9 Agent definition files** — Independent system prompts, permission configs, and temperature parameters for Zhongshu Sheng, Menxia Sheng, Shangshu Sheng, and all six ministries, each with carefully scoped responsibilities and output norms
-- **liubu.py coordination script** — ~300 lines of Python implementing `TaskClassifier` (keyword-based department routing), `MenXiaReviewer` (security review with veto power), `ZhongShuDrafter` (edict formulation), `ShangShuExecutor` (task dispatch and aggregation), and `SanZhengLiuBuOrchestrator` (full pipeline orchestration), with CLI invocation and config-file loading
-- **OpenCode configuration system** — Complete `opencode.jsonc` example and `.env.template` covering 8 agents' model selection, permission tiers, and multi-provider support
-- **Integration reference docs** — Claude Code Skill spec interpretation and OpenCode integration guide ensuring cross-platform compatibility
-
-This project has just launched — stars and users are still few. Yet the power-balancing philosophy behind the Three Departments system maps naturally onto multi-agent AI collaboration. We believe that as the community grows, this mechanism will prove valuable across more domains — from code development to project management, security auditing, and compliance governance. We look forward to working with fellow builders to let this ancient wisdom take root in new technical soil.
-
 ## License
 
 [MIT License](./LICENSE)
