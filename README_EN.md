@@ -35,7 +35,8 @@ Emperor → Zhongshu Sheng (draft edict) → Menxia Sheng (review) → Shangshu 
 sanzheng-liubu/
 ├── SKILL.md                          # Core Skill definition
 ├── scripts/
-│   └── liubu.py                      # Six Ministries coordination script (Python)
+│   ├── liubu.py                      # Six Ministries coordination script (Python)
+│   └── web_viewer.py                 # Web visualization viewer (port 8080)
 ├── templates/
 │   ├── settings.template.json        # OpenCode configuration template
 │   └── .env.template                 # Environment variables template
@@ -163,6 +164,26 @@ Emperor: "Scan all API endpoints and report security vulnerabilities"
 python scripts/liubu.py "Add user registration feature" --verbose
 ```
 
+### Web Visualization Viewer
+
+Start a local web server to view the agent workflow as a hierarchical tree in your browser:
+
+```bash
+# Default port 8080
+python scripts/web_viewer.py
+
+# Custom port
+python scripts/web_viewer.py --port 3000
+
+# Custom data directory
+python scripts/web_viewer.py --data-dir /path/to/data
+```
+
+After starting, visit `http://localhost:8080` to:
+- Enter instructions and watch the agent workflow tree expand in real time
+- View complete work logs for all historical sessions
+- Track total sessions, completed, rejected, and running counts
+
 ## Execution Closed-Loop
 
 1. **Emperor issues instruction** → Received by Zhongshu Sheng
@@ -195,6 +216,10 @@ python scripts/liubu.py "Add user registration feature" --verbose
 ## License
 
 [MIT License](./LICENSE)
+
+## Acknowledgments
+
+This project was developed with AI assistance, powered by **MiMo-V2.5**.
 
 ## Related Resources
 

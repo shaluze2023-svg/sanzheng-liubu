@@ -35,7 +35,8 @@
 sanzheng-liubu/
 ├── SKILL.md                          # Skill 核心定义文件
 ├── scripts/
-│   └── liubu.py                      # 六部 API 协调脚本（Python）
+│   ├── liubu.py                      # 六部 API 协调脚本（Python）
+│   └── web_viewer.py                 # Web 可视化查看器（端口 8080）
 ├── templates/
 │   ├── settings.template.json        # OpenCode 配置模板
 │   └── .env.template                 # 环境变量模板
@@ -163,6 +164,26 @@ OpenAI 格式兼容所有 OpenAI 兼容的第三方服务（如 DeepSeek、Azure
 python scripts/liubu.py "为项目添加用户注册功能" --verbose
 ```
 
+### Web 可视化查看器
+
+启动本地 Web 服务，在浏览器中查看 Agent 工作流的象形树记录：
+
+```bash
+# 默认端口 8080
+python scripts/web_viewer.py
+
+# 自定义端口
+python scripts/web_viewer.py --port 3000
+
+# 自定义数据目录
+python scripts/web_viewer.py --data-dir /path/to/data
+```
+
+启动后访问 `http://localhost:8080`，即可在浏览器中：
+- 输入指令并实时查看 Agent 流程的象形树展开
+- 查看所有历史会话的完整工作记录
+- 统计总会话数、已完成、已驳回、执行中数量
+
 ## 执行流程闭环
 
 1. **皇帝下达指令** → 中书省接收
@@ -195,6 +216,10 @@ python scripts/liubu.py "为项目添加用户注册功能" --verbose
 ## 许可证
 
 [MIT License](./LICENSE)
+
+## 致谢
+
+本项目由 AI 协助开发，使用模型为 **MiMo-V2.5**。
 
 ## 相关资源
 
