@@ -1,7 +1,7 @@
 ---
 description: 兵部·安全分析与测试部署 — 处理漏洞检测、自动化测试运行、环境部署等安全防御任务
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.2
 permission:
   edit: ask

@@ -61,7 +61,7 @@ sanzheng-liubu/
 ### 前提条件
 
 - 已安装 OpenCode 或 Claude Code
-- 至少 1 个可用的 Anthropic API Key（可共用，也可为各机构分别配置）
+- 至少 1 个可用的 API Key（支持 Anthropic / OpenAI / Google Gemini 三种格式，可混用）
 
 ### 项目级安装（推荐）
 
@@ -100,17 +100,35 @@ cp -r sanzheng-liubu/opencode-config/agents/ ~/.config/opencode/agents/
 cp templates/.env.template .env
 ```
 
-最少配置只需一个 `ANTHROPIC_API_KEY`，所有机构共用。如需增强独立性，可为中书省、门下省分别配置不同提供商的 Key。
+最少配置只需一个 `ANTHROPIC_API_KEY`，所有机构共用。也支持 OpenAI 和 Google Gemini 格式，可为不同机构配置不同提供商的 Key 以增强独立性。
+
+### 多提供商支持
+
+本项目支持三种 API 格式，可在 `.env` 中按需配置：
+
+| 提供商 | 环境变量 | 支持的模型示例 |
+|--------|----------|----------------|
+| Anthropic | `ANTHROPIC_API_KEY` | claude-4-6-opus |
+| OpenAI | `OPENAI_API_KEY` + `OPENAI_BASE_URL` | gpt-4o, gpt-4o-mini |
+| Google Gemini | `GOOGLE_API_KEY` | gemini-2.5-pro, gemini-2.5-flash |
+
+OpenAI 格式兼容所有 OpenAI 兼容的第三方服务（如 DeepSeek、Azure OpenAI 等），只需修改 `OPENAI_BASE_URL` 即可。
 
 ### 模型选择
 
 | 机构 | 推荐模型 | 说明 |
 |------|----------|------|
-| 中书省 | claude-sonnet-4 | 需要高质量拟令起草 |
-| 门下省 | claude-sonnet-4 | 需要严谨审核判断 |
-| 尚书省 | claude-sonnet-4 | 需要复杂任务编排 |
-| 吏/户/礼部 | claude-haiku-4 | 规范性任务，轻量模型即可 |
-| 兵/刑/工部 | claude-sonnet-4 | 需要深度分析或代码生成 |
+| 中书省 | claude-4-6-opus | 需要高质量拟令起草 |
+| 门下省 | claude-4-6-opus | 需要严谨审核判断 |
+| 尚书省 | claude-4-6-opus | 需要复杂任务编排 |
+| 吏部 | claude-4-6-opus | 项目管理与版本控制 |
+| 户部 | claude-4-6-opus | 事务数据处理与成本核算 |
+| 礼部 | claude-4-6-opus | 代码规范与文档生成 |
+| 兵部 | claude-4-6-opus | 安全分析与测试部署 |
+| 刑部 | claude-4-6-opus | 合规审计与故障调试 |
+| 工部 | claude-4-6-opus | 代码编写与功能构建 |
+
+> 也可按需将各机构模型替换为 `openai/gpt-4o` 或 `google/gemini-2.5-pro`，在 `opencode.json` 或 agent 配置中修改 `model` 字段即可。
 
 ## 使用示例
 

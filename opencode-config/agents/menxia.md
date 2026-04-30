@@ -1,7 +1,7 @@
 ---
 description: 门下省·审核复核机构 — 对中书省拟令进行完整性审查、安全审计和内容把关，拥有独立驳回权
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.2
 permission:
   edit: deny

@@ -61,7 +61,7 @@ sanzheng-liubu/
 ### Prerequisites
 
 - OpenCode or Claude Code installed
-- At least 1 Anthropic API Key (can be shared across all agents, or configured separately)
+- At least 1 API Key (supports Anthropic / OpenAI / Google Gemini — can be mixed)
 
 ### Project-level Installation (Recommended)
 
@@ -100,17 +100,35 @@ Copy `templates/.env.template` to `.env` and fill in your actual API Keys:
 cp templates/.env.template .env
 ```
 
-The minimum configuration requires only one `ANTHROPIC_API_KEY` shared by all agents. For enhanced independence, you can configure separate keys from different providers for Zhongshu Sheng and Menxia Sheng.
+The minimum configuration requires only one `ANTHROPIC_API_KEY` shared by all agents. OpenAI and Google Gemini formats are also supported — you can configure different providers for different agents to enhance independence.
+
+### Multi-Provider Support
+
+This project supports three API formats, configurable in `.env`:
+
+| Provider | Environment Variables | Supported Models |
+|----------|----------------------|------------------|
+| Anthropic | `ANTHROPIC_API_KEY` | claude-4-6-opus |
+| OpenAI | `OPENAI_API_KEY` + `OPENAI_BASE_URL` | gpt-4o, gpt-4o-mini |
+| Google Gemini | `GOOGLE_API_KEY` | gemini-2.5-pro, gemini-2.5-flash |
+
+The OpenAI format is compatible with any OpenAI-compatible third-party service (e.g., DeepSeek, Azure OpenAI) — simply modify `OPENAI_BASE_URL`.
 
 ### Model Selection
 
 | Agent | Recommended Model | Reason |
 |-------|-------------------|--------|
-| Zhongshu Sheng | claude-sonnet-4 | Needs high-quality edict drafting |
-| Menxia Sheng | claude-sonnet-4 | Needs rigorous review judgment |
-| Shangshu Sheng | claude-sonnet-4 | Needs complex task orchestration |
-| Personnel / Revenue / Rites | claude-haiku-4 | Standard tasks, lightweight model suffices |
-| War / Justice / Works | claude-sonnet-4 | Needs deep analysis or code generation |
+| Zhongshu Sheng | claude-4-6-opus | Needs high-quality edict drafting |
+| Menxia Sheng | claude-4-6-opus | Needs rigorous review judgment |
+| Shangshu Sheng | claude-4-6-opus | Needs complex task orchestration |
+| Li Bu (Personnel) | claude-4-6-opus | Project management & version control |
+| Hu Bu (Revenue) | claude-4-6-opus | Transactional data & cost estimation |
+| Li Bu (Rites) | claude-4-6-opus | Code standards & documentation |
+| Bing Bu (War) | claude-4-6-opus | Security analysis & testing |
+| Xing Bu (Justice) | claude-4-6-opus | Compliance auditing & debugging |
+| Gong Bu (Works) | claude-4-6-opus | Code writing & feature building |
+
+> You can also replace any agent's model with `openai/gpt-4o` or `google/gemini-2.5-pro` by modifying the `model` field in `opencode.json` or agent config files.
 
 ## Usage Examples
 

@@ -1,7 +1,7 @@
 ---
 description: 礼部·代码规范与文档生成 — 处理代码格式修正、注释撰写、文档生成等规范任务
 mode: subagent
-model: anthropic/claude-haiku-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.2
 permission:
   edit: allow

@@ -1,7 +1,7 @@
 ---
 description: 刑部·合规审计与故障调试 — 处理故障排查、日志分析、错误修复等审计调试任务
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.3
 permission:
   edit: allow

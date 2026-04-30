@@ -1,7 +1,7 @@
 ---
 description: 尚书省·政务执行机构 — 接收审核通过的拟令，拆分为可执行任务单元，按类别分发给六部执行，汇总结果上报皇帝
 mode: primary
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.4
 permission:
   edit: allow

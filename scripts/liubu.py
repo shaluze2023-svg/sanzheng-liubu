@@ -304,16 +304,16 @@ class SanZhengLiuBuOrchestrator:
 
         # 默认配置
         return {
-            "zhongshu": {"model": "claude-sonnet-4-20250514", "temperature": 0.3},
-            "menxia": {"model": "claude-sonnet-4-20250514", "temperature": 0.2},
-            "shangshu": {"model": "claude-sonnet-4-20250514", "temperature": 0.4},
+            "zhongshu": {"model": "claude-4-6-opus", "temperature": 0.3},
+            "menxia": {"model": "claude-4-6-opus", "temperature": 0.2},
+            "shangshu": {"model": "claude-4-6-opus", "temperature": 0.4},
             "departments": {
-                "LI_BU": {"model": "claude-haiku-4-20250514", "temperature": 0.3},
-                "HU_BU": {"model": "claude-haiku-4-20250514", "temperature": 0.3},
-                "LI_BU2": {"model": "claude-haiku-4-20250514", "temperature": 0.2},
-                "BING_BU": {"model": "claude-sonnet-4-20250514", "temperature": 0.2},
-                "XING_BU": {"model": "claude-sonnet-4-20250514", "temperature": 0.3},
-                "GONG_BU": {"model": "claude-sonnet-4-20250514", "temperature": 0.4},
+                "LI_BU": {"model": "claude-4-6-opus", "temperature": 0.3},
+                "HU_BU": {"model": "claude-4-6-opus", "temperature": 0.3},
+                "LI_BU2": {"model": "claude-4-6-opus", "temperature": 0.2},
+                "BING_BU": {"model": "claude-4-6-opus", "temperature": 0.2},
+                "XING_BU": {"model": "claude-4-6-opus", "temperature": 0.3},
+                "GONG_BU": {"model": "claude-4-6-opus", "temperature": 0.4},
             },
         }
 

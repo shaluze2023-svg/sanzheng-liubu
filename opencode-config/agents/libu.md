@@ -1,7 +1,7 @@
 ---
 description: 吏部·项目管理与版本控制 — 处理CI/CD流程、Git工作流、任务排期分析等项目管理任务
 mode: subagent
-model: anthropic/claude-haiku-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.3
 permission:
   edit: ask

@@ -1,7 +1,7 @@
 ---
 description: 中书省·决策起草机构 — 对皇帝指令进行总结、概括、筛选和重述，形成清晰拟令文本供门下省审核
 mode: primary
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.3
 permission:
   edit: ask

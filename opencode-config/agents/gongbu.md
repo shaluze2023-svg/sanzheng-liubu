@@ -1,7 +1,7 @@
 ---
 description: 工部·代码编写与功能构建 — 处理底层编码、功能开发、API集成等核心开发任务
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.4
 permission:
   edit: allow

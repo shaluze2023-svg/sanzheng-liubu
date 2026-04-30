@@ -1,7 +1,7 @@
 ---
 description: 户部·事务数据处理与成本核算 — 处理代码量统计、依赖评估、预算分析等数据事务
 mode: subagent
-model: anthropic/claude-haiku-4-20250514
+model: anthropic/claude-4-6-opus
 temperature: 0.3
 permission:
   edit: deny
