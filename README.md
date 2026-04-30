@@ -4,6 +4,10 @@
 
 [English](./README_EN.md) | 中文
 
+## 说明
+
+本项目由 AI 协助开发，使用模型为 **MiMo-V2.5**。内置 Web 可视化查看器，支持在浏览器中实时查看 Agent 工作流的象形树记录（`python scripts/web_viewer.py`，默认端口 8080）。
+
 ## 概念
 
 「三省六部制」是一套模块化的多角色代理 Skill，适用于 **Claude Code** 和 **OpenCode** 平台。系统模拟古代朝廷的三省审核与六部分工机制：
@@ -216,10 +220,6 @@ python scripts/web_viewer.py --data-dir /path/to/data
 ## 许可证
 
 [MIT License](./LICENSE)
-
-## 致谢
-
-本项目由 AI 协助开发，使用模型为 **MiMo-V2.5**。
 
 ## 相关资源
 

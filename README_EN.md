@@ -4,6 +4,10 @@
 
 [中文](./README.md) | English
 
+## Note
+
+This project was developed with AI assistance, powered by **MiMo-V2.5**. Includes a built-in web visualization viewer for real-time hierarchical tree inspection of agent workflows (`python scripts/web_viewer.py`, default port 8080).
+
 ## Concept
 
 **SanZheng-LiuBu** (Three Departments and Six Ministries) is a modular multi-agent Skill for **Claude Code** and **OpenCode** platforms. The system simulates the ancient Chinese imperial court's review-and-execute mechanism:
@@ -216,10 +220,6 @@ After starting, visit `http://localhost:8080` to:
 ## License
 
 [MIT License](./LICENSE)
-
-## Acknowledgments
-
-This project was developed with AI assistance, powered by **MiMo-V2.5**.
 
 ## Related Resources
 
